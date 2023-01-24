@@ -1,18 +1,26 @@
+#name for workflow
 name: sample_python_trigger
 
+# how to triiger the workflow
 on:
   # Triggers the workflow every 5 minutes
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: '*/2 * * * *'
 
 # on: [push]
 
+# jobs to be executed in the workflow
 jobs:
-  #build:
+  
+  # job-name
   cron:
+    # machine to be needed to run this job
     runs-on: ubuntu-latest
 
+    #steps in the job
+
     steps:
+      #This action checks-out your repository under $GITHUB_WORKSPACE , so your workflow can access it.
       - uses: actions/checkout@v3
 
       - name: run python script
