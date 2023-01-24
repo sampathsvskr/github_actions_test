@@ -14,6 +14,8 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: run python script
+        env:
+          SECRET_TOKEN_NAME: ${{ secrets.SECRET_NAME }}
         run: python main.py
 
 
