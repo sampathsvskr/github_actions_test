@@ -16,6 +16,7 @@ jobs:
       - name: run python script
         env:
           SECRET_TOKEN_NAME: ${{ secrets.SECRET_NAME }}
+          VARIABLE_NAME: ${{ variables.VAR1 }}
         run: python main.py
 
 
