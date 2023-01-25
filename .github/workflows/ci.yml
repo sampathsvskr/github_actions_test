@@ -2,13 +2,13 @@
 name: sample_python_trigger
 
 # how to triiger the workflow
-on:
-  # Triggers the workflow every 5 minutes
-  schedule:
-    - cron: '*/30 * * * *'
+# on:
+#   # Triggers the workflow every 5 minutes
+#   schedule:
+#     - cron: '*/30 * * * *'
 
   
-#on: [push]
+on: [push]
 
 # jobs to be executed in the workflow
 jobs:
