@@ -2,12 +2,12 @@
 name: sample_python_trigger
 
 # how to triiger the workflow
-on:
-  # Triggers the workflow every 5 minutes
-  schedule:
-    - cron: '*/15 * * * *'
+# on:
+#   # Triggers the workflow every 5 minutes
+#   schedule:
+#     - cron: '*/15 * * * *'
 
-# on: [push]
+on: [push]
 
 # jobs to be executed in the workflow
 jobs:
@@ -27,7 +27,7 @@ jobs:
         env:
           SECRET_TOKEN_NAME: ${{ secrets.SECRET_NAME }}
           VARIABLE_NAME: ${{ vars.V1 }}
-        run: python main.py
+        run: python scripts/main.py
 
 
 
